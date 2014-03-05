@@ -470,7 +470,7 @@ def removeFromQueue(id):
 
 
 def login():
-    content = opener.open("http://movies.netflix.com/").read()
+    content = opener.open("http://movies.netflix.com/Login").read()
     match = re.compile('"LOCALE":"(.+?)"', re.DOTALL).findall(content)
     if match and not os.path.exists(localeFile):
         fh = open(localeFile, 'w')
